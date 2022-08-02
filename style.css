@@ -87,6 +87,9 @@
             background-color: #000000b0;
             z-index: 1;
         }
+        .imgCont{
+            background-color: white;
+        }
 
         .right_panel {
             width: 75%;
@@ -310,31 +313,19 @@
         }
 
         .child_2 {
-            width: 90%;
-        }
-
-        .child_3 {
-            width: 60%;
-        }
-
-        .child_4 {
             width: 80%;
         }
 
-        .child_5 {
-            width: 40%;
+        .child_3 {
+            width: 70%;
         }
 
-        .child_6 {
+        .child_4 {
             width: 60%;
         }
 
-        .child_7 {
-            width: 70%;
-        }
-
-        .child_8 {
-            width: 70%;
+        .child_5 {
+            width: 50%;
         }
 
         .right_panel_2 {
@@ -508,6 +499,12 @@
             main>.left_panel {
                 margin-bottom: 20px;
             }
+            .title_all{
+                text-align: start;
+            }
+            .skills_title h3{
+                width: 100%;
+            }
 
             .yellow_Paragraph {
                 overflow: hidden;
@@ -518,5 +515,11 @@
             .yellow_Paragraph>p,
             b {
                 display: none;
+            }
+            .title_all::before{
+                left: 0;
+            }
+            .skills_title::before{
+                left: 0;
             }
         }
