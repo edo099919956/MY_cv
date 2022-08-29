@@ -11,18 +11,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>CV</title>
+    <title>MY-CV</title>
 </head>
 
 <body>
 
+    <div class="image_enlargement">
+        <div class="image_enlargement_wrap">
+            <img class="image_enlargement_photo" src="person/person_photo.jpg" alt="user">
+
+            <div class="close__btn" onclick="closeImg()">
+                <span class="close__btn-redact close__btn-top"></span>
+                <span class="close__btn-redact close__btn-center"></span>
+                <span class="close__btn-redact close__btn-bottom"></span>
+            </div>
+            
+        </div>
+    </div>
+
     <div class="parent">
         <header>
-            <aside class="left_panel">
+            <aside class="left_panel" onclick="openImg()">
                 <div class="imgCont">
                     <img class="user_photo" src="person/person_photo.jpg" alt="user">
                 </div>
-                <div class="yellow_Paragraph yellow_Paragraph_2">
+                <div class="header_Paragraph header_Paragraph_2">
                     <b>professional<br> profile</b>
                 </div>
             </aside>
@@ -36,7 +49,7 @@
                 <div class="top_title_3">
                     <address>address: nerqin shengavit 11-st 40/2-home</address>
                 </div>
-                <div class="yellow_Paragraph">
+                <div class="header_Paragraph ">
                     <p>
                         2015 - 2019 • State State Institute of Physical Culture and Sports of Armenia<br> <br>Coaching
                         and pedagogical faculty CERTFICATE IN PROGRAMMING 2021 • <u>DaniSoft IT Company</u> Web
@@ -45,6 +58,7 @@
                 </div>
             </aside>
         </header>
+
         <main>
             <aside class="left_panel">
                 <div class="left_panel_1">
@@ -55,7 +69,7 @@
                         <ul>
                             <li class="hov">
                                 <img class="scale" src="icons/phone.png" alt="icon">
-                                <a class="change_color" href="tel:+37498337644">+374 (098)337644</a>
+                                <a class="change_color" href="tel:+37498337644">+374 (98)33-76-44</a>
                             </li>
                             <li class="hov">
                                 <img class="scale" src="icons/email.png" alt="icon">
@@ -182,7 +196,6 @@
                         </div>
                     </div>
                 </div>
-
             </aside>
 
             <aside class="right_panel ">
@@ -213,6 +226,7 @@
                     </div>
                     <p>2015 - 2021 "EKOPROF" (LLC) production line operator</p>
                     <p>2022 - three months intern at "codetime"</p>
+                    <p>2022 - html css javascript programming teacher at "LernCode" company</p>
                 </div>
 
                 <div class="right_panel_2">
@@ -249,14 +263,16 @@
             </aside>
         </main>
         <footer>
-            <script src="Gradient.js"></script>
-            <canvas id="gradient-canvas"></canvas>
-            <script>
-                var gradient = new Gradient()
-                gradient.initGradient('#gradient-canvas');
-            </script>
+
         </footer>
     </div>
+    <script src="script.js"></script>
+    <script src="Gradient.js"></script>
+    <canvas id="gradient-canvas"></canvas>
+    <script>
+        var gradient = new Gradient()
+        gradient.initGradient('#gradient-canvas');
+    </script>
 </body>
 
 </html>
