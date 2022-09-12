@@ -93,7 +93,7 @@ body {
 
 /* active */
 .close__btn:active {
-   transform: translate3d(1px, 1px, 0)
+    transform: translate3d(1px, 1px, 0)
 }
 
 .close__btn-top {
@@ -128,7 +128,6 @@ body {
     bottom: 4px;
     right: 4px;
 }
-
 
 /* ------------------------------------------------------------- */
 /* ------------------------------------------------------------- */
@@ -572,11 +571,16 @@ main {
     .right_panel {
         width: 80%;
         min-width: 270px;
+        padding-left: 0;
     }
 
     .right_panel_1 {
         text-align: center;
         padding-left: 0;
+    }
+
+    .right_panel_2 {
+        padding-right: 0;
     }
 
     main {
@@ -613,5 +617,41 @@ main {
 
     .skills_title::before {
         left: 0;
+    }
+
+    .close__btn:active .close__btn-top {
+        transform: rotate(135deg);
+        top: 5px;
+        right: 3px;
+        width: 50%;
+    }
+
+    .close__btn:active .close__btn-center {
+        opacity: 1;
+        top: 1px;
+    }
+
+    .close__btn:active .close__btn-bottom {
+        width: 50%;
+        transform: rotate(50deg);
+        bottom: 4px;
+        right: 4px;
+    }
+
+    .hov:active .change_color {
+        color: #EDAD0BFF;
+        margin-left: +2px;
+    }
+
+    .hov:active .scale {
+        transform: rotate(20deg);
+    }
+
+    .skills_iner>div:active>.bottom_border::after {
+        width: 100%;
+    }
+
+    .project>a:active {
+        transform: scale(0.99);
     }
 }
