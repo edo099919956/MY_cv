@@ -130,7 +130,6 @@ body {
 }
 
 /* ------------------------------------------------------------- */
-/* ------------------------------------------------------------- */
 .parent {
     width: 85%;
     margin: 60px 0;
@@ -168,11 +167,16 @@ header {
     text-align-last: end;
 }
 
-.header_Paragraph>p {
-    text-transform: none;
-    font-family: cursive;
+.download-cv{
+    padding: 10px 25px;
+    background-color: #EDAD0BFF;
+    cursor: pointer;
+    transition: 250ms;
 }
-
+.download-cv:hover{
+    transform: translate(1px, 1px);
+    background-color: #343434;
+}
 .left_panel {
     width: 25%;
     min-width: 270px;
