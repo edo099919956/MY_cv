@@ -167,16 +167,18 @@ header {
     text-align-last: end;
 }
 
-.download-cv{
+.download-cv {
     padding: 10px 25px;
     background-color: #EDAD0BFF;
     cursor: pointer;
     transition: 250ms;
 }
-.download-cv:hover{
+
+.download-cv:hover {
     transform: translate(1px, 1px);
     background-color: #343434;
 }
+
 .left_panel {
     width: 25%;
     min-width: 270px;
@@ -277,6 +279,7 @@ main {
 .contact>ul>li {
     display: flex;
     align-items: center;
+    width: fit-content;
 }
 
 .contact>ul>li>img {
@@ -284,6 +287,9 @@ main {
     height: 25px;
     margin-right: 5px;
     margin-bottom: 3px;
+}
+.download-cv2{
+    display: none;
 }
 
 .hov:hover .change_color {
@@ -608,6 +614,15 @@ main {
         overflow: hidden;
         height: 5px;
         background-color: #EDAD0BFF !important;
+    }
+    .download-cv2{
+        height: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+    .header_Paragraph_1 {
+        display: none;
     }
 
     .header_Paragraph>p,
