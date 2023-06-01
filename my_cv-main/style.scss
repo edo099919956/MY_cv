@@ -1,4 +1,4 @@
-$colorOrange: #7ec5ff;
+$colorOrange: #4f52ff;
 $colorWhite: #eaeaea;
 $colorBlack: #00000097;
 
@@ -31,10 +31,10 @@ body {
 #gradient-canvas {
     width: 100%;
     height: 100vh;
-    --gradient-color-2: #004cff;
-    --gradient-color-3: #000087;
-    --gradient-color-4: #004cff;
-    --gradient-color-1: #000087;
+    --gradient-color-2: #00005f;
+    --gradient-color-3: #00005f;
+    --gradient-color-4: #0006b4;
+    --gradient-color-1: #0006b4;
 }
 
 #gradient-canvas {
@@ -572,39 +572,39 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 10px;
-}
 
-.project>a {
-    width: 49%;
-    padding: 5px;
-    transition: 200ms;
-    background-color: $colorBlack;
-    margin-bottom: 10px;
-    text-align: center;
-    border-radius: 3px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
+    a {
+        width: 33%;
+        padding: 5px;
+        transition: 200ms;
+        background-color: $colorBlack;
+        margin-bottom: 10px;
+        text-align: center;
+        border-radius: 3px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
 
-.project>a>p {
-    margin: 0;
-    font-size: 20px;
-    letter-spacing: 1.5px;
-}
+        p {
+            margin: 0;
+            font-size: 20px;
+            letter-spacing: 1.5px;
+        }
 
-.project>a>img {
-    width: 100%;
-    height: 80%;
-    box-shadow: 0 0 10px 0px $colorBlack;
-    transition: 200ms;
-    object-fit: cover;
-    object-position: top;
-}
+        img {
+            width: 100%;
+            height: 80%;
+            box-shadow: 0 0 10px 0px $colorBlack;
+            transition: 200ms;
+            object-fit: cover;
+            object-position: top;
+        }
 
-.project>a:hover {
-    transform: scale(0.99);
+        &:hover {
+            transform: scale(0.99);
+        }
+    }
 }
 
 .title_all_2 {
@@ -691,6 +691,10 @@ main {
 
     .right_panel_2>p {
         font-size: 18px;
+    }
+
+    .project a {
+        width: 49%;
     }
 }
 
