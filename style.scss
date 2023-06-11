@@ -456,23 +456,21 @@ main {
 
 .project>a {
     width: 49%;
-    padding: 5px;
     transition: 200ms;
-    background-color: rgb(0, 110, 255);
+    border: 2px solid #006eff;
     margin-bottom: 10px;
     text-align: center;
     border-radius: 3px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
 }
 
 .project>a>p {
-    position: relative;
-    top: 5px;
+    padding: 22px 0px 13px 0px;
     margin: 0;
-    font-size: 20px;
+    font-family: sans-serif;
+    font-size: 16px;
     letter-spacing: 1.3px;
 }
 
@@ -560,6 +558,10 @@ main {
     .parent {
         width: 95%;
     }
+
+    .project>a>p {
+        font-size: 12px;
+    }
 }
 
 @media only screen and (max-width: 700px) {
@@ -592,17 +594,23 @@ main {
     .left_panel {
         width: 80%;
         transition: 200ms;
-    }
-
-    .right_panel {
         width: 80%;
         min-width: 270px;
         padding-left: 0;
+        margin-bottom: 0;
+    }
+
+    .right_panel {
+        background-color: #0000009e;
+        width: 80%;
+        padding: 0;
     }
 
     .right_panel_1 {
         text-align: center;
         padding-left: 0;
+        background-color: #00000085;
+        width: 80%;
     }
 
     .right_panel_2 {
@@ -618,8 +626,12 @@ main {
         align-items: center;
     }
 
-    main>.left_panel {
-        margin-bottom: 20px;
+    .title_all_2>h3 {
+        padding-left: 40px;
+    }
+
+    .right_panel_2>p {
+        padding: 0 10px;
     }
 
     .title_all {
@@ -689,6 +701,10 @@ main {
 
     .skills_iner>div:active>.bottom_border::after {
         width: 100%;
+    }
+
+    .project {
+        padding: 0 10px;
     }
 
     .project>a:active {
