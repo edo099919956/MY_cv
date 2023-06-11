@@ -54,6 +54,7 @@ body {
   height: 100vh;
   opacity: 0;
   z-index: 0;
+  padding: 20px;
 }
 
 .image_enlargement_wrap {
@@ -669,5 +670,10 @@ main {
   }
   .project > a:active {
     transform: scale(0.99);
+  }
+}
+@media only screen and (max-width: 440px) {
+  .image_enlargement_wrap {
+    height: auto;
   }
 }/*# sourceMappingURL=style.css.map */

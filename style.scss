@@ -54,8 +54,10 @@ body {
     height: 100vh;
     opacity: 0;
     z-index: 0;
+    padding: 20px;
 }
-.image_enlargement_wrap{
+
+.image_enlargement_wrap {
     display: flex;
     position: relative;
     align-items: center;
@@ -63,6 +65,7 @@ body {
     height: 85vh;
     width: fit-content;
 }
+
 .image_enlargement_photo {
     width: 100%;
     height: 100%;
@@ -690,5 +693,11 @@ main {
 
     .project>a:active {
         transform: scale(0.99);
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .image_enlargement_wrap {
+        height: auto;
     }
 }
