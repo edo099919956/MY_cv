@@ -175,15 +175,16 @@ header {
 
 .download-cv {
   padding: 10px 25px;
-  background-color: #00aeff;
+  background: rgb(0, 174, 255);
+  background: linear-gradient(0deg, rgb(0, 174, 255) 53%, rgb(171, 228, 255) 100%);
   font-weight: 600;
-  transition: 250ms;
+  transition: background 350ms;
   cursor: pointer;
 }
-
 .download-cv:hover {
   transform: translate(1px, 1px);
-  background-color: #00c5f2;
+  background: rgb(22, 22, 22);
+  background: linear-gradient(0deg, rgb(22, 22, 22) 52%, rgb(77, 77, 77) 100%);
 }
 
 .left_panel {
@@ -547,6 +548,10 @@ main {
 
 .margin_bottom {
   padding-bottom: 50px;
+}
+
+.header_Paragraph {
+  display: none;
 }
 
 @media only screen and (max-width: 1080px) {
