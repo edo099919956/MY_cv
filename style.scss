@@ -1,13 +1,20 @@
-$titlesColor: rgb(0, 187, 255);
+$colorOrange: #4f52ff;
+$colorWhite: #eaeaea;
+$colorBlack: #00000097;
 
 * {
     box-sizing: border-box;
+
+}
+
+img {
     user-select: none;
+    object-fit: cover;
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: $colorWhite;
 }
 
 body {
@@ -18,17 +25,16 @@ body {
     justify-content: center;
     font-family: 'Dongle', sans-serif;
     width: 100%;
-    color: white;
+    color: $colorWhite;
 }
 
-/* -----------------------gradient colors---------------------- */
 #gradient-canvas {
     width: 100%;
     height: 100vh;
-    --gradient-color-1: #0088ff;
-    --gradient-color-2: #5500ff;
-    --gradient-color-3: #3c00ff;
-    --gradient-color-4: #9900ff;
+    --gradient-color-2: #00005f;
+    --gradient-color-3: #00005f;
+    --gradient-color-4: #0006b4;
+    --gradient-color-1: #0006b4;
 }
 
 #gradient-canvas {
@@ -43,35 +49,35 @@ body {
 }
 
 /* ------------------------------------------------------------- */
+/* ------------------------------------------------------------- */
 .image_enlargement {
     position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     opacity: 0;
     z-index: 0;
-    padding: 20px;
 }
 
 .image_enlargement_wrap {
-    display: flex;
     position: relative;
-    align-items: center;
-    justify-content: center;
-    height: 85vh;
-    width: fit-content;
+    height: 90%;
+    padding: 20px;
+    border-radius: 100px;
+    box-sizing: border-box;
+    max-height: 650px
 }
 
 .image_enlargement_photo {
     width: 100%;
     height: 100%;
-    box-shadow: 0 0 30px 10px black;
-    border-radius: 8px;
     object-fit: contain;
+    box-shadow: 0 0 30px 10px $colorBlack;
+    border-radius: 8px;
 }
 
 .close__btn {
@@ -81,15 +87,15 @@ body {
     height: 20px;
     justify-content: space-between;
     flex-direction: column;
+    cursor: pointer;
     top: 35px;
     right: 35px;
     transition: 350ms;
-    cursor: pointer;
 }
 
 .close__btn-redact {
     width: 100%;
-    border-top: 2px solid #fff;
+    border-top: 2px solid $colorWhite;
     transition: 150ms;
     position: relative;
 }
@@ -137,7 +143,7 @@ body {
     width: 85%;
     margin: 60px 0;
     transition: 350ms;
-    background: #00000085;
+    background: $colorBlack;
 }
 
 header {
@@ -151,13 +157,13 @@ header {
     right: 0;
     bottom: 0px;
     width: 100%;
-    height: 36%;
+    height: 25%;
     display: flex;
     align-items: center;
     padding-bottom: 30px;
     padding-left: 30px;
     padding-right: 20px;
-    background-color: #0000009e;
+    background-color: $colorBlack;
 }
 
 .header_Paragraph_2 {
@@ -172,17 +178,16 @@ header {
 
 .download-cv {
     padding: 10px 25px;
-    background: rgb(0, 174, 255);
-    background: linear-gradient(0deg, rgba(0, 174, 255, 1) 53%, rgba(171, 228, 255, 1) 100%);
+    background-color: $colorOrange;
+    transition: 150ms;
+    font-family: sans-serif;
     font-weight: 600;
-    transition: background 350ms;
     cursor: pointer;
+}
 
-    &:hover {
-        transform: translate(1px, 1px);
-        background: rgb(22, 22, 22);
-        background: linear-gradient(0deg, rgba(22, 22, 22, 1) 52%, rgba(77, 77, 77, 1) 100%);
-    }
+.download-cv:hover {
+    transform: scale(0.99);
+    background-color: #50b0ff;
 }
 
 .left_panel {
@@ -190,12 +195,12 @@ header {
     min-width: 270px;
     position: relative;
     text-transform: uppercase;
-    background-color: #0000009e;
+    background-color: $colorBlack;
     cursor: pointer;
 }
 
 .imgCont {
-    background-color: white;
+    background-color: $colorWhite;
     width: 100%;
     height: 100%;
 }
@@ -209,15 +214,128 @@ header {
 
 .top_title {
     width: 100%;
-    font-family: 'Cinzel', serif;
+    text-transform: capitalize;
+    letter-spacing: 4px;
 }
 
 .top_title_2 {
-    background-color: #0000009e;
-    color: $titlesColor;
+    background-color: $colorBlack;
+    color: $colorOrange;
     padding: 1px;
-    letter-spacing: 2px;
-    padding-left: 10px;
+    letter-spacing: 0;
+    overflow: hidden;
+
+    .subTitle {
+        padding-left: 15px;
+        text-transform: lowercase;
+
+        span {
+            display: inline-block;
+            transform: translate(-20px, -45px);
+            opacity: 0.5;
+
+            &:nth-child(1) {
+                animation: animate 700ms ease-in-out forwards;
+                animation-delay: 0;
+            }
+
+            &:nth-child(2) {
+                animation: animate 700ms ease-in-out forwards;
+                animation-delay: 100ms;
+            }
+
+            &:nth-child(3) {
+                animation: animate 700ms ease-in-out forwards;
+                animation-delay: 200ms;
+            }
+
+            &:nth-child(4) {
+                animation: animate 700ms ease-in-out forwards;
+                animation-delay: 300ms;
+            }
+
+            &:nth-child(5) {
+                animation: animate 700ms ease-in-out forwards;
+                animation-delay: 400ms;
+            }
+
+            &:nth-child(6) {
+                animation: animate 700ms ease-in-out forwards;
+                animation-delay: 500ms;
+            }
+
+            &:nth-child(7) {
+                animation: animate 700ms ease-in-out forwards;
+                animation-delay: 600ms;
+            }
+
+            &:nth-child(8) {
+                animation: animate 700ms ease-in-out forwards;
+                animation-delay: 700ms;
+            }
+
+            &:nth-child(9) {
+                animation: animate 700ms ease-in-out forwards;
+                animation-delay: 800ms;
+            }
+
+            &:nth-child(10) {
+                animation: animate 700ms ease-in-out forwards;
+                animation-delay: 900ms;
+            }
+
+            &:nth-child(11) {
+                animation: animate 700ms ease-in-out forwards;
+                animation-delay: 1000ms;
+            }
+
+            &:nth-child(12) {
+                animation: animate 700ms ease-in-out forwards;
+                animation-delay: 1100ms;
+            }
+
+            &:nth-child(13) {
+                animation: animate 700ms ease-in-out forwards;
+                animation-delay: 1200ms;
+            }
+
+            &:nth-child(14) {
+                animation: animate 700ms ease-in-out forwards;
+                animation-delay: 1300ms;
+            }
+
+            &:nth-child(15) {
+                animation: animate 700ms ease-in-out forwards;
+                animation-delay: 1400ms;
+            }
+
+            &:nth-child(16) {
+                animation: animate 700ms ease-in-out forwards;
+                animation-delay: 1500ms;
+            }
+
+            &:nth-child(17) {
+                animation: animate 700ms ease-in-out forwards;
+                animation-delay: 1600ms;
+            }
+
+            @keyframes animate {
+                0% {
+                    transform: translate(-20px, -45px);
+                }
+
+                50% {
+                    transform: translate(0px, 5px);
+                }
+
+                100% {
+                    transform: translate(0px, 0px);
+                    opacity: 1;
+                }
+            }
+        }
+
+    }
 }
 
 main {
@@ -244,7 +362,7 @@ main {
 }
 
 .title_all>div>h3 {
-    color: $titlesColor;
+    color: $colorOrange;
     margin: 0;
     text-transform: uppercase;
 }
@@ -255,7 +373,7 @@ main {
     height: 3px;
     top: 40px;
     left: 0;
-    background-color: $titlesColor;
+    background-color: $colorOrange;
     position: absolute;
 }
 
@@ -266,7 +384,7 @@ main {
     top: 40px;
     right: 0;
     border-radius: 10px;
-    background-color: $titlesColor;
+    background-color: $colorOrange;
     position: absolute;
 }
 
@@ -301,7 +419,7 @@ main {
 }
 
 .hov:hover .change_color {
-    color: $titlesColor;
+    color: $colorOrange;
     margin-left: +2px;
 }
 
@@ -351,7 +469,7 @@ main {
     height: 0.5px;
     bottom: 6px;
     left: 0;
-    background-color: $titlesColor;
+    background-color: $colorOrange;
     transition: 200ms;
 }
 
@@ -360,7 +478,7 @@ main {
 }
 
 .skills_title {
-    color: $titlesColor;
+    color: $colorOrange;
     font-size: 24px;
     margin: 0;
     text-transform: uppercase;
@@ -372,7 +490,7 @@ main {
 .skills_title>p {
     margin: 0;
     display: flex;
-    color: $titlesColor;
+    color: $colorOrange;
     text-transform: uppercase;
     font-size: 38px;
 }
@@ -383,7 +501,7 @@ main {
     height: 3px;
     top: 40px;
     left: 0;
-    background-color: $titlesColor;
+    background-color: $colorOrange;
     position: absolute;
 }
 
@@ -394,13 +512,13 @@ main {
     top: 40px;
     right: 0;
     border-radius: 10px;
-    background-color: $titlesColor;
+    background-color: $colorOrange;
     position: absolute;
 }
 
 .skill_bar {
     width: 60%;
-    border: 1px solid $titlesColor;
+    border: 1px solid $colorOrange;
     height: 10px;
     border-radius: 25px;
     position: relative;
@@ -411,7 +529,7 @@ main {
     height: 10px;
     top: -1px;
     position: absolute;
-    background-color: $titlesColor;
+    background-color: $colorOrange;
 }
 
 .child_1 {
@@ -454,39 +572,39 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 10px;
-}
 
-.project>a {
-    width: 49%;
-    transition: 200ms;
-    border: 2px solid #006eff;
-    margin-bottom: 10px;
-    text-align: center;
-    border-radius: 3px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
+    a {
+        width: 33%;
+        padding: 5px;
+        transition: 200ms;
+        background-color: $colorBlack;
+        margin-bottom: 10px;
+        text-align: center;
+        border-radius: 3px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
 
-.project>a>p {
-    padding: 22px 0px 13px 0px;
-    margin: 0;
-    font-family: sans-serif;
-    font-size: 16px;
-    letter-spacing: 1.3px;
-}
+        p {
+            margin: 0;
+            font-size: 20px;
+            letter-spacing: 1.5px;
+        }
 
-.project>a>img {
-    width: 100%;
-    height: 80%;
-    box-shadow: 0 0 10px 0px black;
-    transition: 200ms;
-    object-fit: cover;
-    object-position: top;
-}
+        img {
+            width: 100%;
+            height: 80%;
+            box-shadow: 0 0 10px 0px $colorBlack;
+            transition: 200ms;
+            object-fit: cover;
+            object-position: top;
+        }
 
-.project>a:hover {
-    transform: scale(0.99);
+        &:hover {
+            transform: scale(0.99);
+        }
+    }
 }
 
 .title_all_2 {
@@ -495,7 +613,7 @@ main {
     font-family: 'Dongle', sans-serif;
     font-size: 24px;
     padding-bottom: 20px;
-    color: $titlesColor;
+    color: $colorOrange;
     position: relative;
 }
 
@@ -508,7 +626,7 @@ main {
     width: 100%;
     height: 3px;
     top: 40px;
-    background-color: $titlesColor;
+    background-color: $colorOrange;
     position: absolute;
     border-radius: 50px 0 0 0;
 }
@@ -519,7 +637,7 @@ main {
     height: 6px;
     top: 40px;
     border-radius: 10px;
-    background-color: $titlesColor;
+    background-color: $colorOrange;
     position: absolute;
 }
 
@@ -544,10 +662,6 @@ main {
     padding-bottom: 50px;
 }
 
-.header_Paragraph {
-    display: none;
-}
-
 @media only screen and (max-width: 1080px) {
     .header_Paragraph {
         padding-bottom: 0;
@@ -564,10 +678,6 @@ main {
     .parent {
         width: 95%;
     }
-
-    .project>a>p {
-        font-size: 12px;
-    }
 }
 
 @media only screen and (max-width: 700px) {
@@ -581,6 +691,10 @@ main {
 
     .right_panel_2>p {
         font-size: 18px;
+    }
+
+    .project a {
+        width: 49%;
     }
 }
 
@@ -600,23 +714,17 @@ main {
     .left_panel {
         width: 80%;
         transition: 200ms;
-        width: 80%;
-        min-width: 270px;
-        padding-left: 0;
-        margin-bottom: 0;
     }
 
     .right_panel {
-        background-color: #0000009e;
         width: 80%;
-        padding: 0;
+        min-width: 270px;
+        padding-left: 0;
     }
 
     .right_panel_1 {
         text-align: center;
         padding-left: 0;
-        background-color: #00000085;
-        width: 80%;
     }
 
     .right_panel_2 {
@@ -632,12 +740,8 @@ main {
         align-items: center;
     }
 
-    .title_all_2>h3 {
-        padding-left: 40px;
-    }
-
-    .right_panel_2>p {
-        padding: 0 10px;
+    main>.left_panel {
+        margin-bottom: 20px;
     }
 
     .title_all {
@@ -651,7 +755,7 @@ main {
     .header_Paragraph {
         overflow: hidden;
         height: 5px;
-        background-color: $titlesColor !important;
+        background-color: $colorOrange !important;
     }
 
     .download-cv2 {
@@ -697,7 +801,7 @@ main {
     }
 
     .hov:active .change_color {
-        color: $titlesColor;
+        color: $colorOrange;
         margin-left: +2px;
     }
 
@@ -709,17 +813,7 @@ main {
         width: 100%;
     }
 
-    .project {
-        padding: 0 10px;
-    }
-
     .project>a:active {
         transform: scale(0.99);
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .image_enlargement_wrap {
-        height: auto;
     }
 }
