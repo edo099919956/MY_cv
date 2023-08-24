@@ -190,7 +190,7 @@ header {
   position: relative;
   font-weight: 600;
   transition: all 350ms;
-  z-index: 1;
+  z-index: 2;
 }
 .download-cv span::before {
   content: "";
@@ -454,7 +454,7 @@ main {
   font-family: "Poppins", sans-serif;
 }
 .right_panel_2 p {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 200;
   letter-spacing: 0.8px;
 }
@@ -614,6 +614,7 @@ main {
     padding-left: 0;
     background-color: rgba(0, 0, 0, 0.5215686275);
     width: 80%;
+    min-width: 270px;
   }
   .right_panel_2 {
     padding-right: 0;
@@ -643,9 +644,8 @@ main {
     background-color: #ffbf00 !important;
   }
   .download-cv2 {
-    height: 30px;
     display: flex;
-    align-items: center;
+    font-size: 13px;
   }
   .header_Paragraph_1 {
     display: none;

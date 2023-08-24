@@ -181,14 +181,13 @@ header {
     text-transform: capitalize;
     border-radius: 4px;
     font-family: 'Poppins', sans-serif;
-
     cursor: pointer;
 
     span {
         position: relative;
         font-weight: 600;
         transition: all 350ms;
-        z-index: 1;
+        z-index: 2;
     }
 
     span::before {
@@ -205,7 +204,7 @@ header {
         box-shadow: 0 0 7px 6px #ffbf00;
     }
 
-    &:hover span::before{
+    &:hover span::before {
         height: 70px;
     }
 }
@@ -463,7 +462,7 @@ main {
     font-family: 'Poppins', sans-serif;
 
     p {
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 200;
         letter-spacing: 0.8px;
     }
@@ -637,6 +636,7 @@ main {
         padding-left: 0;
         background-color: #00000085;
         width: 80%;
+        min-width: 270px;
     }
 
     .right_panel_2 {
@@ -659,7 +659,7 @@ main {
     .right_panel_2>p {
         padding: 0 10px;
     }
-
+    
     .title_all {
         text-align: start;
     }
@@ -675,9 +675,8 @@ main {
     }
 
     .download-cv2 {
-        height: 30px;
         display: flex;
-        align-items: center;
+        font-size: 13px;
     }
 
     .header_Paragraph_1 {
