@@ -25,10 +25,10 @@ body {
 #gradient-canvas {
     width: 100%;
     height: 100vh;
-    --gradient-color-1: #b07920;
-    --gradient-color-2: #875c16;
-    --gradient-color-3: #5a3d0f;
-    --gradient-color-4: #362509;
+    --gradient-color-1: #000000;
+    --gradient-color-2: #1d007c;
+    --gradient-color-3: #210097;
+    --gradient-color-4: #401b67;
 }
 
 #gradient-canvas {
@@ -151,7 +151,7 @@ header {
     right: 0;
     bottom: 0px;
     width: 100%;
-    height: 36%;
+    height: 100px;
     display: flex;
     align-items: center;
     padding-bottom: 30px;
@@ -171,17 +171,42 @@ header {
 }
 
 .download-cv {
-    padding: 10px 25px;
-    background: rgb(0, 174, 255);
-    background: linear-gradient(0deg, #161616 52%, #4d4d4d 100%);
-    font-weight: 600;
-    transition: background 350ms;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 120px;
+    background-color: #262727;
+    text-transform: capitalize;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+
     cursor: pointer;
 
-    &:hover {
-        transform: translate(1px, 1px);
-        background: rgb(22, 22, 22);
-        background: linear-gradient(0deg, #4d4d4d 52%, #161616 100%);
+    span {
+        position: relative;
+        font-weight: 600;
+        transition: all 350ms;
+        z-index: 1;
+    }
+
+    span::before {
+        content: "";
+        position: absolute;
+        top: -25px;
+        left: -40px;
+        width: 150px;
+        height: 27px;
+        background-color: #ffbf00;
+        transform: rotate(341deg);
+        transition: 300ms;
+        z-index: -1;
+        box-shadow: 0 0 7px 6px #ffbf00;
+    }
+
+    &:hover span::before{
+        height: 70px;
     }
 }
 
@@ -189,7 +214,6 @@ header {
     width: 25%;
     min-width: 270px;
     position: relative;
-    text-transform: uppercase;
     background-color: #0000009e;
     cursor: pointer;
 }
@@ -202,19 +226,18 @@ header {
 .right_panel {
     width: 75%;
     position: relative;
-    text-transform: uppercase;
     padding-left: 30px;
 }
 
 .top_title {
     width: 100%;
-    font-family: 'Cinzel', serif;
 }
 
 .top_title_2 {
     background-color: #0000009e;
     color: $titlesColor;
     padding: 1px;
+    text-transform: capitalize;
     letter-spacing: 2px;
     padding-left: 10px;
 }
@@ -229,53 +252,53 @@ main {
 
 .title_all {
     width: 100%;
-    text-transform: capitalize;
     text-align: end;
     position: relative;
     padding: 0 10%;
     font-family: 'Dongle', sans-serif;
     font-size: 24px;
     padding-bottom: 20px;
-}
 
-.title_all>p {
-    text-align: end;
-}
+    p {
+        text-align: end;
+    }
 
-.title_all>div>h3 {
-    color: $titlesColor;
-    margin: 0;
-    text-transform: uppercase;
-}
+    div h3 {
+        color: $titlesColor;
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 28px;
+    }
 
-.title_all::after {
-    content: "";
-    width: 100%;
-    height: 3px;
-    top: 40px;
-    left: 0;
-    background-color: $titlesColor;
-    position: absolute;
-}
+    &::after {
+        content: "";
+        width: 100%;
+        height: 3px;
+        top: 40px;
+        left: 0;
+        background-color: $titlesColor;
+        position: absolute;
+    }
 
-.title_all::before {
-    content: "";
-    width: 10%;
-    height: 6px;
-    top: 40px;
-    right: 0;
-    border-radius: 10px;
-    background-color: $titlesColor;
-    position: absolute;
-}
+    &::before {
+        content: "";
+        width: 10%;
+        height: 6px;
+        top: 40px;
+        right: 0;
+        border-radius: 10px;
+        background-color: $titlesColor;
+        position: absolute;
+    }
 
-.title_all>ul {
-    width: 100%;
-    list-style-type: none;
-    padding: 0;
-    line-height: 2;
-    margin: 0;
-    margin-top: 20px;
+    ul {
+        width: 100%;
+        list-style-type: none;
+        padding: 0;
+        line-height: 2;
+        margin: 0;
+        margin-top: 20px;
+    }
 }
 
 .contact {
@@ -360,41 +383,43 @@ main {
 
 .skills_title {
     color: $titlesColor;
-    font-size: 24px;
     margin: 0;
-    text-transform: uppercase;
     justify-content: flex-end !important;
     position: relative;
     margin-bottom: 20px;
-}
 
-.skills_title>p {
-    margin: 0;
-    display: flex;
-    color: $titlesColor;
-    text-transform: uppercase;
-    font-size: 38px;
-}
+    p {
+        margin: 0;
+        display: flex;
+        color: $titlesColor;
+        font-size: 38px;
+    }
 
-.skills_title::after {
-    content: "";
-    width: 100%;
-    height: 3px;
-    top: 40px;
-    left: 0;
-    background-color: $titlesColor;
-    position: absolute;
-}
+    h3 {
+        text-transform: uppercase;
+        font-size: 30px;
+    }
 
-.skills_title::before {
-    content: "";
-    width: 10%;
-    height: 6px;
-    top: 40px;
-    right: 0;
-    border-radius: 10px;
-    background-color: $titlesColor;
-    position: absolute;
+    &::after {
+        content: "";
+        width: 100%;
+        height: 3px;
+        top: 40px;
+        left: 0;
+        background-color: $titlesColor;
+        position: absolute;
+    }
+
+    &::before {
+        content: "";
+        width: 10%;
+        height: 6px;
+        top: 40px;
+        right: 0;
+        border-radius: 10px;
+        background-color: $titlesColor;
+        position: absolute;
+    }
 }
 
 .skill_bar {
@@ -435,16 +460,17 @@ main {
 
 .right_panel_2 {
     padding-right: 20px;
-}
+    font-family: 'Poppins', sans-serif;
 
-.right_panel_2>p {
-    font-size: 22px;
-    font-weight: 600;
-    letter-spacing: 0.8px;
-}
+    p {
+        font-size: 15px;
+        font-weight: 200;
+        letter-spacing: 0.8px;
+    }
 
-.right_panel_2>ul {
-    list-style-type: none;
+    ul {
+        list-style-type: none;
+    }
 }
 
 .project {
@@ -455,7 +481,7 @@ main {
     margin-bottom: 10px;
 }
 
-.project > a {
+.project>a {
     width: 49%;
     transition: 200ms;
     margin-bottom: 10px;
@@ -489,36 +515,36 @@ main {
 
 .title_all_2 {
     position: relative;
-    text-transform: uppercase;
     width: 100%;
     font-family: 'Dongle', sans-serif;
     font-size: 24px;
+    text-transform: uppercase;
     padding-bottom: 20px;
     color: $titlesColor;
-}
 
-.title_all_2>h3 {
-    margin: 0;
-}
+    h3 {
+        margin: 0;
+    }
 
-.title_all_2::after {
-    content: "";
-    width: 100%;
-    height: 3px;
-    top: 40px;
-    background-color: $titlesColor;
-    position: absolute;
-    border-radius: 50px 0 0 0;
-}
+    &::after {
+        content: "";
+        width: 100%;
+        height: 3px;
+        top: 40px;
+        background-color: $titlesColor;
+        position: absolute;
+        border-radius: 50px 0 0 0;
+    }
 
-.title_all_2::before {
-    content: "";
-    width: 82px;
-    height: 6px;
-    top: 40px;
-    border-radius: 10px;
-    background-color: $titlesColor;
-    position: absolute;
+    &::before {
+        content: "";
+        width: 82px;
+        height: 6px;
+        top: 40px;
+        border-radius: 10px;
+        background-color: $titlesColor;
+        position: absolute;
+    }
 }
 
 .user_photo {
